@@ -1,0 +1,35 @@
+.home {
+    &__img {
+        max-width: calc(100% - 48%);
+
+        @media (max-width: $tablet-width) {
+            max-width: calc(100% - 30%);
+        }
+
+        @media (max-width: $mobile-big-width) {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        text-align: right;
+        margin: auto 0;
+
+        @media (max-width: $tablet-width) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        pointer-events: none;
+        margin-bottom: 70px;
+
+        @media (max-width: $tablet-width) {
+            margin-bottom: 45px;
+        }
+
+        &>span {
+            color: $color-extra;
+        }
+    }
+}
