@@ -9,6 +9,7 @@
         background-color: $color-block;
         border-radius: 25px;
         padding: 25px 50px;
+        min-height: 357px;
         flex-basis: 70%;
 
         @media (max-width: $tablet-width) {
