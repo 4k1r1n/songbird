@@ -143,6 +143,7 @@ const play = () => {
             answerAudio.src = shuffledBirds[i].audio;
             if (answerAudio.muted) answerAudio.muted = !answerAudio.muted;
             infoVolumeSlider.value = 100;
+            answerAudio.volume = 1;
             infoVolumeSlider.style.setProperty('--volume-progress-width', '100%');
             renderInfo(shuffledBirds[i].name, shuffledBirds[i].species, shuffledBirds[i].description, shuffledBirds[i].image);
         });
