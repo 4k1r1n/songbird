@@ -1,0 +1,28 @@
+.main {
+    padding: 0 15px 30px;
+    flex: 1;
+    animation: fadeIn 1s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: $tablet-width) {
+        margin-bottom: 50px;
+    }
+
+    &_bg {
+        background: url("../assets/images/quiz_bg/bg_music_note_2.png") left top no-repeat,
+            url("../assets/images/quiz_bg/bg_music_note_1.png") right bottom no-repeat;
+
+        @media (max-width:$tablet-width) {
+            background: url("../assets/images/quiz_bg/bg_music_note_1.png") right bottom no-repeat;
+        }
+    }
+}

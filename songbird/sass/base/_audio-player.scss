@@ -1,0 +1,113 @@
+.audio-player {
+    display: flex;
+    align-items: center;
+
+    &__timeline {
+        width: 65%;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    &__timer {
+        @include font($size: 1.4rem);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+
+    &__volume:hover .audio-player__volume-slider {
+        width: 40px;
+
+        &::-webkit-slider-thumb {
+            visibility: visible;
+        }
+    }
+
+    &__time-slider:hover.audio-player__time-slider::-webkit-slider-thumb {
+        opacity: 1;
+    }
+
+    &__volume-slider:hover.audio-player__volume-slider::-webkit-slider-thumb {
+        opacity: 1;
+    }
+
+    &__time-slider {
+        --time-progress-width: 0%;
+
+        &::before {
+            width: var(--time-progress-width);
+            transition: width 0.2s ease;
+        }
+    }
+
+    &__volume-slider {
+        --volume-progress-width: 75%;
+
+        &::before {
+            width: var(--volume-progress-width);
+            transition: width 0.2s ease;
+        }
+    }
+
+    &__time-slider,
+    &__volume-slider {
+        position: relative;
+        -webkit-appearance: none;
+        height: 4px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 25px;
+        cursor: pointer;
+
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            border-radius: 25px;
+            background: $color-audio-player-timeline;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            border-radius: 25px;
+            height: 4px;
+            background-color: $color-primary;
+        }
+
+        &::-webkit-slider-thumb {
+            position: relative;
+            -webkit-appearance: none;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    &__volume {
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px 8px;
+        flex-basis: 30%;
+    }
+
+    &__volume-slider {
+        width: 0;
+        transition: all 0.4s ease-in-out;
+
+        &::-webkit-slider-thumb {
+            visibility: hidden;
+        }
+    }
+
+}

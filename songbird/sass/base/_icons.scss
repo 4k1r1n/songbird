@@ -1,0 +1,44 @@
+.ico {
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+
+    &_github {
+        background: url("../assets/icons/footer_ico/github_ico.svg") center no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &_rs {
+        background: url("../assets/icons/footer_ico/rsschool_ico.svg") center no-repeat;
+        background-size: contain;
+        width: 45px;
+        height: 20px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &_play {
+        padding: 0;
+        border: 0;
+        max-width: 40px;
+        object-fit: cover;
+        margin: 0 20px 15px 0;
+    }
+
+    &_volume {
+        padding: 0;
+        border: 0;
+        width: 25px;
+        object-fit: cover;
+    }
+}

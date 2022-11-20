@@ -1,0 +1,51 @@
+.link-btn {
+    display: inline-block;
+    padding: 10px 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: $color-dark;
+    border: 2px solid $color-extra-1;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: $tablet-width) {
+        width: 100%;
+    }
+
+    &:hover {
+        color: $color-light;
+        border: 2px solid $color-extra;
+        background-color: $color-extra;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 50px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: $color-dark;
+    border: 2px solid $color-extra;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    @include font();
+    @extend %font-prim;
+
+    &:disabled {
+        border: 2px solid $color-dark;
+        cursor: default;
+    }
+
+    &:hover:enabled {
+        color: $color-light;
+        border: 2px solid $color-extra-1;
+        background-color: $color-extra-1;
+    }
+
+    @media (max-width: $tablet-width) {
+        width: 70%;
+    }
+
+    @media (max-width: $mobile-big-width) {
+        width: 95%;
+    }
+}

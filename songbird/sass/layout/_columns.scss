@@ -1,0 +1,14 @@
+.layout-2-column {
+    @include columns($width: 48%);
+
+    @media (max-width: $tablet-width) {
+        @include columns($width: 80%);
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    @media (max-width: $mobile-big-width) {
+        @include columns($width: 100%);
+        justify-content: center;
+    }
+}

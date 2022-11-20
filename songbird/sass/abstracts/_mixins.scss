@@ -1,0 +1,14 @@
+@mixin font ($size: 1.6rem, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin columns ($width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    >* {
+        flex-basis: $width;
+    }
+}
