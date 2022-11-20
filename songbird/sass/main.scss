@@ -1,0 +1,20 @@
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+@import "abstracts/variables";
+
+@import "base/typography";
+@import "base/base";
+@import "base/icons";
+@import "base/logo";
+@import "base/buttons";
+@import "base/audio-player";
+
+@import "layout/wrapper";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/columns";
+
+@import "pages/home";
+@import "pages/quiz";
+@import "pages/result";
