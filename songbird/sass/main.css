@@ -220,7 +220,7 @@ p {
   transition: width 0.2s ease;
 }
 .audio-player__volume-slider {
-  --volume-progress-width: 75%;
+  --volume-progress-width: 100%;
 }
 .audio-player__volume-slider::before {
   width: var(--volume-progress-width);

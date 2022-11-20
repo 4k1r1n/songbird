@@ -28,7 +28,7 @@ const renderAudioPlayer = () => {
 
     volumeSlider.setAttribute('type', 'range');
     volumeSlider.setAttribute('max', 100);
-    volumeSlider.setAttribute('value', 75);
+    volumeSlider.setAttribute('value', 100);
     volumeBtnIcon.setAttribute('src', '../assets/icons/audio_player/volume_ico.svg');
 
     timeDuration.textContent = '0:00';

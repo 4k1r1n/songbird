@@ -45,7 +45,7 @@
     }
 
     &__volume-slider {
-        --volume-progress-width: 75%;
+        --volume-progress-width: 100%;
 
         &::before {
             width: var(--volume-progress-width);
