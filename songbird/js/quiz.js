@@ -135,6 +135,7 @@ const play = () => {
     let correctAnswer = false;
 
     questionAudio.src = answer.audio;
+
     renderComponents(shuffledBirds);
     setCurrentLevel(level);
 
