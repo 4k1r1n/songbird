@@ -139,13 +139,15 @@ const play = () => {
     setCurrentLevel(level);
 
     [...answersList.children].forEach((option, i) => {
-        option.addEventListener('click', () => renderInfo(shuffledBirds[i].name, shuffledBirds[i].species, shuffledBirds[i].description, shuffledBirds[i].image));
-        option.onclick = () => {
+        option.addEventListener('click', () => {
             answerAudio.src = shuffledBirds[i].audio;
             if (answerAudio.muted) answerAudio.muted = !answerAudio.muted;
             infoVolumeSlider.value = 100;
             infoVolumeSlider.style.setProperty('--volume-progress-width', '100%');
+            renderInfo(shuffledBirds[i].name, shuffledBirds[i].species, shuffledBirds[i].description, shuffledBirds[i].image);
+        });
 
+        option.onclick = () => {
             if (checkCurrentAnswer(answer.name, shuffledBirds[i])) {
                 score += maxScore;
                 option.onclick = null;
