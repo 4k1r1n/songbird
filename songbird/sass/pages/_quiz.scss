@@ -33,7 +33,6 @@
     &__question {
         justify-content: center;
         gap: 50px;
-        padding: 15px;
     }
 
     &__buttons {
@@ -51,7 +50,6 @@
 
         @media (max-width: $content-width) {
             align-items: center;
-            padding: 15px;
         }
     }
 }

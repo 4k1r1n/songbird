@@ -450,7 +450,6 @@ p {
 .quiz__question {
   justify-content: center;
   gap: 50px;
-  padding: 15px;
 }
 .quiz__buttons {
   display: flex;
@@ -468,7 +467,6 @@ p {
 @media (max-width: 1160px) {
   .quiz__container {
     align-items: center;
-    padding: 15px;
   }
 }
 
