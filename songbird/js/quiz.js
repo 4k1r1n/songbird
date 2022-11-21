@@ -211,6 +211,7 @@ button.onclick = () => {
     if (questionAudio.muted) questionAudio.muted = !questionAudio.muted;
     questionVolumeSlider.value = 100;
     questionVolumeSlider.style.setProperty('--volume-progress-width', '100%');
+    answerAudio.pause();
 
     if (level === 6) {
         localStorage.setItem('score', score);
